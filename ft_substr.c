@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 18:04:50 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/13 15:29:16 by wteles-d         ###   ########.fr       */
+/*   Created: 2023/04/13 18:01:16 by wteles-d          #+#    #+#             */
+/*   Updated: 2023/04/13 18:37:48 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	size_t	i;
+	size_t	j;
+	char	*p;
+	int		slen;
 
-	i = (ft_strlen(s)) - 1;
-	while (s && s[i] != '\0' && s[i] != c)
+	i = start;
+	j = 0;
+	slen = ft_strlen(s);
+	p = (char *)ft_calloc(slen - i + 1, 1);
+	if (p == NULL)
+		return (p);
+	while (s && s[i] != '\0' && j < len)
 	{
-		i--;
+		p[j] = s[i];
+		i++;
+		j++;
 	}
-	return ((char *)s + i);
+	p[j] = '\0';
+	return (p);
 }

@@ -3,24 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wteles-d <wteles-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 18:47:42 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/13 14:30:17 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/13 18:46:38 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-static	int	my_stringl(const char	*len)
-{
-	int	l;
-
-	l = 0;
-	while (len[l] != '\0')
-		l++;
-	return (l);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -29,8 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 
-	sdst = my_stringl(dst);
-	srcl = my_stringl((char *)src);
+	sdst = ft_strlen(dst);
+	srcl = ft_strlen((char *)src);
 	i = 0;
 	j = 0;
 	while (dst[i] != '\0')
