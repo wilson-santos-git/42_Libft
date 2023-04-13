@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 17:31:10 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/03/29 16:45:02 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/13 14:32:48 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(const char *nptr)
 	int	i;
 	int	total;
 	int	n;
-	
+
 	i = 0;
 	total = 0;
 	n = 1;

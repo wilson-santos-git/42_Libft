@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:20:17 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/04 01:35:17 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/13 14:33:08 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		i++;
 	}
-	return(ps1[i] - ps2[i]);
+	return (ps1[i] - ps2[i]);
 }

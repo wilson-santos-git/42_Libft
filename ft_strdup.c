@@ -6,13 +6,13 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 17:59:53 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/07 18:56:29 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/13 14:33:40 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char *ft_strdup(const char *s)
+char    *ft_strdup(const char *s)
 {
 	
 }

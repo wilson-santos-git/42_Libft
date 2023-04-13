@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: wteles-d <wteles-d@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:12:57 by wteles-d          #+#    #+#             */
 /*   Updated: 2023/04/03 16:54:20 by wteles-d         ###   ########.fr       */
