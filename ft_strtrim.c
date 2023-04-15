@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 17:20:21 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/14 19:28:46 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/15 17:22:29 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	while (is_to_remove(s1[i], set) && i < j)
-	{
 		i++;
-	}
 	if (i >= j)
 		return (ft_strdup(s1 + i + 1));
 	while (is_to_remove(s1[j], set))
-	{
 		j--;
-	}
 	p = (char *)ft_calloc(j - i + 1, 1);
 	if (p == NULL)
 		return (p);

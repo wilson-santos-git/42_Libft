@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:37:17 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/14 19:26:56 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/15 18:52:15 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stddef.h>
 
-int		ft_atoi(const char *nptr);
+int	    ft_atoi(const char *nptr);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);

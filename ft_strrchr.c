@@ -6,11 +6,13 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 18:04:50 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/13 15:29:16 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/15 18:40:39 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+size_t	ft_strlen(const char *s);
 
 char	*ft_strrchr(const char *s, int c)
 {
