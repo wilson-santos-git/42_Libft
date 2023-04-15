@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:37:17 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/13 16:11:00 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/14 19:26:56 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,8 @@ char	*ft_strnstr(const char	*haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_toupper(int c);
 int		ft_toupper(int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strdup(const char *s);
 
 #endif
