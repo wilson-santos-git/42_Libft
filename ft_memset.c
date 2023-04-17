@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 15:32:11 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/13 14:33:34 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/17 18:40:51 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	i = 0;
 	ps = (char *)s;
-	while (ps && i < n)
+	while (s && i < n)
 	{
 		ps[i] = c;
 		i++;

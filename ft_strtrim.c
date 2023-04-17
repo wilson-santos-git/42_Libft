@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 17:20:21 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/15 17:22:29 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/17 17:08:44 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 static int	is_to_remove(char const c, char const *str)
 {
 	int	count;
-	
+
 	count = 0;
 	while (str[count])
 	{
@@ -30,10 +30,10 @@ static int	is_to_remove(char const c, char const *str)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*p;
-	
+
 	i = 0;
 	j = ft_strlen(s1) - 1;
 	if (!s1 || !set)
