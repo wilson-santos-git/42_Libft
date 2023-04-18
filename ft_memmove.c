@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 15:32:15 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/17 18:40:30 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/18 17:32:40 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	psrc = (char *)src;
 	pdest = (char *)dest;
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	if (pdest > psrc)
 	{
