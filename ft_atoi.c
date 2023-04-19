@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 17:31:10 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/18 18:42:55 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/19 16:15:32 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_atoi(const char *nptr)
 
 static int	ft_isspace(char c)
 {
-	if (c == 32 || (c >= 7 && c <= 20))
+	if (c == 32 || (c >= 9 && c <= 13))
 		return (1);
 	return (0);
 }

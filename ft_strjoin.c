@@ -6,13 +6,27 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 18:44:37 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/17 17:47:10 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/19 18:44:06 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
+
+static int	ft_spec_strcpy(char *dst, const char *src, int i)
+{
+	size_t	j;
+
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dst[i] = src[j];
+		i++;
+		j++;
+	}
+	return (i);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -27,17 +41,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p = (char *)ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, 1);
 	if (p == NULL)
 		return (p);
-	while (s1 && s1[j++] != '\0')
-	{
-		p[i] = s1[j];
-		i++;
-	}
+	i = ft_spec_strcpy(p, s1, i);
 	j = 0;
-	while (s2 && s2[j++] != '\0')
-	{
-		p[i] = s2[j];
-		i++;
-	}
+	i = ft_spec_strcpy(p, s2, i);
 	p[i] = '\0';
 	return (p);
 }

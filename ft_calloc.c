@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 19:21:49 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/13 17:51:36 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/19 19:17:08 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,27 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
-	int		x;
-	int		y;
 
-	x = nmemb * size;
-	y = x / size;
-	if (y != (int)nmemb)
-		return (NULL);
-	p = (int *)malloc(nmemb * size);
-	if (p == NULL)
-		return (p);
-	ft_bzero(p, nmemb);
+	p = malloc(nmemb * size);
+	if (!p)
+		return (0);
+	ft_bzero(p, nmemb * size);
 	return (p);
 }
+
+// #include <string.h>
+
+// int main(void)
+// {
+// 	size_t	size = 8539;
+//  	void	*d1 = ft_calloc(size, sizeof(int));
+//  	void	*d2 = calloc(size, sizeof(int));
+
+// 	if (memcmp(d1, d2, size * sizeof(int)))
+//  		printf("FAILED\n");
+// 	else 
+// 		printf("PASSED\n");
+//  	free(d1);
+//  	free(d2);
+//  	return (0);
+// }
