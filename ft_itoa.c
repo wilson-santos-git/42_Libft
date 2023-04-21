@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:50:32 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/21 19:01:58 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/21 19:08:54 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ char	*ft_itoa(int n)
 	j = 11;
 	p[12] = 0;
 	p[11] = '0';
-	nj = n * ((n >= 0) - (n < 0));
+	nj = n;
+	if (nj < 0)
+		nj = -nj;
 	while (nj != 0)
 	{
 		p[j] = (nj % 10 + '0');
-		printf("What number am i at: %c\n", (char)((nj % 10) + '0'));
 		j--;
 		nj /= 10;
 	}
