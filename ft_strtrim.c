@@ -6,27 +6,13 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 17:20:21 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/17 17:08:44 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/21 16:40:48 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include "libft.h"
-
-static int	is_to_remove(char const c, char const *str)
-{
-	int	count;
-
-	count = 0;
-	while (str[count])
-	{
-		if (str[count] == c)
-			return (1);
-		count++;
-	}
-	return (0);
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -35,18 +21,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*p;
 
 	i = 0;
-	j = ft_strlen(s1) - 1;
 	if (!s1 || !set)
 		return (NULL);
-	while (is_to_remove(s1[i], set) && i < j)
+	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
-	if (i >= j)
-		return (ft_strdup(s1 + i + 1));
-	while (is_to_remove(s1[j], set))
+	if (!s1[i])
+		return (ft_strdup(s1 + i));
+	j = ft_strlen(s1);
+	while (j != i && ft_strchr(set, s1[j]))
 		j--;
-	p = (char *)ft_calloc(j - i + 1, 1);
+	p = (char *)ft_calloc(j - i + 2, 1);
 	if (p == NULL)
 		return (p);
-	ft_strlcpy(p, s1 + i, j - i);
+	ft_strlcpy(p, s1 + i, j - i + 2);
 	return (p);
 }

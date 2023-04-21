@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 18:01:16 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/19 17:28:05 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/21 15:17:45 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = start;
 	j = 0;
 	slen = ft_strlen(s);
-	if (!s || !len || start >= slen)
+	if (!s && !len)
+		return (NULL);
+	if (start >= slen)
 		return (ft_strdup(""));
-	if (slen >= len)
-		p = (char *)ft_calloc((len + 1), 1);
-	else
-		p = (char *)ft_calloc(((slen - i) + 1), 1);
-	if (p == NULL)
-		return (p);
-	while (j < len && s[j] != '\0')
-	{
-		p[j] = s[i];
-		i++;
-		j++;
-	}
+	slen = slen - i + 1;
+	if (slen > len)
+		slen = len + 1;
+	p = (char *)ft_calloc(slen, 1);
+	if (!p)
+		return (NULL);
+	while (j < len && s[j])
+		p[j++] = s[i++];
 	p[j] = '\0';
 	return (p);
 }
