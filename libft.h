@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:37:17 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/17 17:09:11 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/21 17:50:26 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strdup(const char *s);
 char	**ft_split(char const *s, char c);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_itoa(int n);
 
 #endif
