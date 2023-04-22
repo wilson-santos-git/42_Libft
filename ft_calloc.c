@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 19:21:49 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/19 19:17:08 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/20 16:56:50 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,14 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
-
+	size_t	x;
+	size_t	y;
+	
+	p = 0;
+	x = nmemb * size;
+	y = x / size;
+	if (y != nmemb)
+		return (p);
 	p = malloc(nmemb * size);
 	if (!p)
 		return (0);
