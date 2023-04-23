@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 18:00:55 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/23 01:56:24 by wteles-d         ###   ########.fr       */
+/*   Created: 2023/04/23 02:39:32 by wteles-d          #+#    #+#             */
+/*   Updated: 2023/04/23 02:57:39 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
-
-	i = 0;
-	if (!s)
-		return ;
-	while (s[i])
-	{
-		ft_putchar_fd(&s[i], fd);
-		i++;
-	}
+	t_list	*node;
+	
+	node = *lst;
+	while (node.next != NULL)
+		node = node.next;
+	node.next = new;
 }

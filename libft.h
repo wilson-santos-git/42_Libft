@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:37:17 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/22 18:38:12 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/23 02:12:29 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 
 # include <stddef.h>
+
+typedef	struct	s_list
+{
+	void			*content;
+	struct	s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *nptr);
 void	*ft_memset(void *s, int c, size_t n);
