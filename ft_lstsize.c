@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lstadd_front.c                                   :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/23 02:26:35 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/23 02:39:55 by wteles-d         ###   ########.fr       */
+/*   Created: 2023/04/23 20:29:14 by wteles-d          #+#    #+#             */
+/*   Updated: 2023/04/23 21:56:50 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	ft_lstsize(t_list *lst)
 {
-	new.next = lst;
-	lst = &new;
+	int	counter;
+	t_list	*p;
+
+	counter = 0;
+	p = lst;
+	if (!lst)
+		return (NULL);
+	while (p != NULL)
+	{
+		p = p.next;
+		counter++;
+	}
+	return (counter);
 }
