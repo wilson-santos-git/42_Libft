@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:00:55 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/23 01:56:24 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:55:54 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	while (s[i])
 	{
-		ft_putchar_fd(&s[i], fd);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }

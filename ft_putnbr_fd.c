@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:21:13 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/22 18:35:46 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:36:31 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void	ft_putnbr_fd(int n, int fd)
 		nbr *= -1;
 	}
 	if (nbr > 9)
-		ft_putnbr_fd(nbr / 10);
+		ft_putnbr_fd(nbr / 10, fd);
 	ft_putchar_fd(nbr % 10 + '0', fd);
 }

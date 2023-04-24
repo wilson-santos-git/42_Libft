@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:39:54 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/22 17:45:32 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:37:51 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
-	
+
 	i = 0;
 	if (!s)
 		return ;

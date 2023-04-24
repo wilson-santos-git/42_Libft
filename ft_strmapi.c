@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:04:26 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/22 17:32:08 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 16:38:49 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s)
 		return (NULL);
-	p = ft_calloc(ft_strlen(s), sizeof(char));
+	p = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!p)
 		return (NULL);
 	while (s[i])

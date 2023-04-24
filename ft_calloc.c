@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 19:21:49 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/20 16:56:50 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 16:36:21 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,35 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
-	size_t	x;
-	size_t	y;
-	
-	p = 0;
-	x = nmemb * size;
-	y = x / size;
-	if (y != nmemb)
-		return (p);
-	p = malloc(nmemb * size);
+
+	p = (void *)malloc(nmemb * size);
 	if (!p)
-		return (0);
+		return (NULL);
 	ft_bzero(p, nmemb * size);
 	return (p);
 }
 
+// void	*ft_calloc(size_t nmemb, size_t size)
+// {
+// 	void	*p;
+// 	size_t	x;
+// 	size_t	y;
+
+// 	p = 0;
+// 	x = nmemb * size;
+// 	y = x / size;
+// 	if (y != nmemb)
+// 		return (p);
+// 	if (size == 0)
+// 		p = malloc(nmemb);
+// 	else
+// 		p = malloc(nmemb * size);
+// 	if (!p)
+// 		return (0);
+// 	ft_bzero(p, nmemb * size);
+// 	return (p);
+// }
+//
 // #include <string.h>
 
 // int main(void)

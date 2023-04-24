@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 21:20:39 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/23 21:57:56 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:31:03 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,16 @@
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*p;
+	t_list	*current;
 
 	if (!lst)
 		return ;
-	while (*lst)
+	current = *lst;
+	while (current)
 	{
-		p = *lst.next;
-		ft_lstdelone(*lst, del);
-		*lst = p;
+		p = current->next;
+		ft_lstdelone(current, del);
+		current = p;
 	}
 	*lst = NULL;
 }

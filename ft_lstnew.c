@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 02:11:21 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/23 21:20:24 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:32:01 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*p;
-	
-	t_list p = malloc(sizeof(t_list));
+
+	p = malloc(sizeof(t_list));
 	if (!p)
 		return (NULL);
-	p.content = content;
-	p.next = NULL;
+	p->content = content;
+	p->next = NULL;
 	return (p);
 }

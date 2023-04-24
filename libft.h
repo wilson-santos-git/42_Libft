@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:37:17 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/23 02:12:29 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:38:15 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 # include <stddef.h>
 
-typedef	struct	s_list
+typedef struct s_list
 {
 	void			*content;
-	struct	s_list	*next;
+	struct s_list	*next;
 }					t_list;
 
 int		ft_atoi(const char *nptr);
@@ -55,5 +55,14 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *lst);
 
 #endif

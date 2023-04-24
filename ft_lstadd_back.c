@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 02:39:32 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/23 02:57:39 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 16:46:41 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,16 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*node;
-	
+
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
 	node = *lst;
-	while (node.next != NULL)
-		node = node.next;
-	node.next = new;
+	while (node->next != NULL)
+		node = node->next;
+	node->next = new;
 }

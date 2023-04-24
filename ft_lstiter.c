@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 22:10:52 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/23 22:13:12 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 16:52:46 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*p;
 
-	p = lst;
 	if (!lst)
 		return ;
-	while (p.next != NULL)
+	p = lst;
+	while (p)
 	{
-		f(p.content);
-		p = p.next;
+		f(p->content);
+		p = p->next;
 	}
 }
