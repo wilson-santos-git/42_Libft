@@ -6,7 +6,7 @@
 /*   By: wteles-d <wteles-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 15:36:59 by wteles-d          #+#    #+#             */
-/*   Updated: 2023/04/21 17:47:26 by wteles-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 17:34:59 by wteles-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static void	ft_free_all(char **p)
 static int	ft_alloc_word(char **p, char const *s, int i, char c)
 {
 	*p = (char *)ft_calloc(size_word(s, c, i) + 1, sizeof(char));
-	if (p == NULL)
+	if (!p)
 		return (0);
 	ft_strlcpy(*p, s + i, (size_t)size_word(s, c, i) + 1);
 	return (1);
